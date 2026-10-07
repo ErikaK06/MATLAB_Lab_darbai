@@ -32,3 +32,18 @@ ylabel('Y asis');
 zlabel('Z asis');
 title('Trimatis pavirsiaus grafikas');
 grid on;
+
+x3 = linspace(-2, 2, 50);
+y3 = linspace(-2, 2, 50);
+[X3, Y3] = meshgrid(x3, y3);
+Z3 = 1 - (X3.^2 + Y3.^2);
+
+figure;
+surf(X3, Y3, Z3, 'FaceColor', 'red', 'EdgeColor', 'none');
+camlight('left');
+lighting gouraud;
+title('Papildoma uzduotis');
+xlabel('X asis');
+ylabel('Y asis');
+zlabel('Z asis');
+grid on;
